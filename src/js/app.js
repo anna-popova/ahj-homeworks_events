@@ -4,7 +4,7 @@ import userClick from '../components/user-click/user-click';
 document.addEventListener('DOMContentLoaded', () => {
   const playingArea = new PlayingArea(document.querySelector('.playing-area'));
 
-  setInterval(playingArea.randomMovingGoblin, 2000);
+  setInterval(playingArea.randomMovingGoblin, 1000);
 
   userClick();
 })
