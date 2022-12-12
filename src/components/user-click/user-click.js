@@ -1,6 +1,6 @@
 import endGame from '../end-game/end-game';
 
-export default function userClick() {
+export default function userClick(timerId) {
     const playingItemsCollection = document.querySelectorAll('.playing-area__item');
 
     const userPoints = document.querySelector('.user-got-points__number');
@@ -18,6 +18,7 @@ export default function userClick() {
             console.log(userFailPoints);
             if (userFailPoints >= 5) {
                 endGame();
+                clearTimeout(timerId);
             }
           }
       })
